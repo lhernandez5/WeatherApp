@@ -63,3 +63,9 @@
     font-weight: 600;
     font-size: 12px;
 }
+
+.title-weather{
+    color: rgb(48, 95, 160);
+    font-size: 23px;
+    font-weight: 700;
+}

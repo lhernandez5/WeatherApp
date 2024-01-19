@@ -1,6 +1,7 @@
-.title {
-    font-size: 23px;
+.title-daily {
+    font-size: 19px;
     font-weight: 700;
+    color: rgb(48, 95, 160);
 }
 .daily-item {
     background-color: #f5f5f5;
@@ -22,8 +23,10 @@
 }
 
 .day {
-    color: #212121;
+    /* color: #212121; */
+    color: rgb(48, 95, 160);
     flex: 1 1;
+    font-size: 17px;
     font-weight: 600;
     margin-left: 15px;
 }
