@@ -1,3 +1,10 @@
+.head-title{
+  font-size: 40px;
+  font-family: "Montserrat", serif;
+  text-align: center;
+  color: rgb(49, 70, 188);
+}
+
 .container {
   max-width: 1080px;
   margin: 20px auto;

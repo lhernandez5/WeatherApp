@@ -18,9 +18,11 @@
 .city {
     font-weight: 600;
     align-items: 18px;
-    line-height: 1;
+    /* line-height: 1; */
     margin: 0;
     letter-spacing: 1px;
+    font-size: 20px;
+    font-family: "Montserrat", serif;
 }
 
 .weather-description {
@@ -55,17 +57,17 @@
 .parameter-label {
     text-align: left;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .parameter-value {
     text-align: right;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .title-weather{
     color: rgb(48, 95, 160);
-    font-size: 23px;
+    font-size: 25px;
     font-weight: 700;
 }
