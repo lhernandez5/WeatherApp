@@ -16,7 +16,9 @@
 
 .icon-small{
     width: 40px;
-    background-color: #8bbdda; 
+    background-color: #ddebf2; 
+    border-radius: 10px;
+    border: 1.5px solid #b9c2d1;
 }
 
 .day {
@@ -55,9 +57,10 @@
 
 }
 
-.daily-details-grid-item label:first-child{
-    color: #626266;
-}
+/* .daily-details-grid-item label:first-child{
+    color: #383839;
+    font-weight: bold;
+} */
 
 .daily-details-grid-item label:last-child{
     color: #212121;
