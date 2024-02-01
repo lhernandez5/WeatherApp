@@ -31,9 +31,6 @@ function App() {
       .catch((err) => console.log(err));
   };
 
-  console.log(currentWeather);
-  console.log(forecast);
-
   return (
     <>
       <h2 className="head-title">A Weather App</h2>
