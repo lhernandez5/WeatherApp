@@ -1,69 +1,68 @@
 .title-daily {
-    font-size: 19px;
-    font-weight: 700;
-    color: rgb(48, 95, 160);
+  font-size: 19px;
+  font-weight: 700;
+  color: rgb(48, 95, 160);
 }
 .daily-item {
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    height: 40px;
-    margin: 5px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 5px 20px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px 20px;
 }
 
-.icon-small{
-    width: 40px;
-    background-color: #ddebf2; 
-    border-radius: 10px;
-    border: 1.5px solid #8f8f94;
+.icon-small {
+  width: 40px;
+  background-color: #ddebf2;
+  border-radius: 10px;
+  border: 1.5px solid #8f8f94;
 }
 
 .day {
-    /* color: #212121; */
-    color: rgb(48, 95, 160);
-    flex: 1 1;
-    font-size: 17px;
-    font-weight: 600;
-    margin-left: 15px;
+  /* color: #212121; */
+  color: rgb(48, 95, 160);
+  flex: 1 1;
+  font-size: 17px;
+  font-weight: 600;
+  margin-left: 15px;
 }
 
 .description {
-    flex: 1 1;
-    margin-right: 15px;
-    text-align: right;
+  flex: 1 1;
+  margin-right: 15px;
+  text-align: right;
 }
 
 .min-max {
-    color: #757575
+  color: #757575;
 }
 
 .daily-details-grid {
-    grid-row: 0;
-    grid-column-gap: 15px;
-    row-gap: 0;
-    column-gap: 15px;
-    display: grid;
-    flex: 1 1;
-    grid-template-columns: auto auto;
-    padding: 5px 15px;
+  grid-row: 0;
+  grid-column-gap: 15px;
+  row-gap: 0;
+  column-gap: 15px;
+  display: grid;
+  flex: 1 1;
+  grid-template-columns: auto auto;
+  padding: 5px 15px;
 }
 
 .daily-details-grid-item {
-    display: flex;
-    height: 30px;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  height: 30px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.daily-details-grid-item label:first-child{
-    color: #383839;
+.daily-details-grid-item label:first-child {
+  color: #383839;
 }
 
-.daily-details-grid-item label:last-child{
-    color: #212121;
+.daily-details-grid-item label:last-child {
+  color: #212121;
 }

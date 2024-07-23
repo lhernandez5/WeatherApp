@@ -5,7 +5,7 @@ import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
 import { WEATHER_API_URL, WEATHER_API_KEY } from "./Api";
 import Forecast from "./components/Forecast/Forecast";
 
-function App() {
+const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
@@ -41,6 +41,6 @@ function App() {
       </div>
     </>
   );
-}
+};
 
 export default App;
