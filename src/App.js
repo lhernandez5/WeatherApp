@@ -9,26 +9,28 @@ const App = () => {
   const [currentWeather, setCurrentWeather] = useState(null);
   const [forecast, setForecast] = useState(null);
 
-  const handleOnSearchChange = (searchData) => {
-    console.log(searchData);
+  const handleOnSearchChange = async (searchData) => {
     const [lat, lon] = searchData.value.split(" ");
 
     const currentWeatherFetch = fetch(
       `${WEATHER_API_URL}/weather?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`
     );
+
     const forecastFetch = fetch(
       `${WEATHER_API_URL}/forecast?lat=${lat}&lon=${lon}&appid=${WEATHER_API_KEY}&units=imperial`
     );
 
-    Promise.all([currentWeatherFetch, forecastFetch])
-      .then(async (response) => {
-        const weatherResponse = await response[0].json();
-        const forecastResponse = await response[1].json();
+    try {
+      const [weatherResponse, forecastResponse] = await Promise.all([
+        currentWeatherFetch.then((response) => response.json()),
+        forecastFetch.then((response) => response.json()),
+      ]);
 
-        setCurrentWeather({ city: searchData.label, ...weatherResponse });
-        setForecast({ city: searchData.label, ...forecastResponse });
-      })
-      .catch((err) => console.log(err));
+      setCurrentWeather({ city: searchData.label, ...weatherResponse });
+      setForecast({ city: searchData.label, ...forecastResponse });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

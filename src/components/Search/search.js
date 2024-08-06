@@ -6,23 +6,29 @@ import "./Search.css";
 const Search = ({ onSearchChange }) => {
   const [search, setSearch] = useState(null);
 
-  const loadOptions = (inputValue) => {
-    return fetch(
-      `${GEO_API_URL}/cities?minPopulation=100000&namePrefix=${inputValue}`,
-      geoApiOptions
-    )
-      .then((response) => response.json())
-      .then((response) => {
-        return {
-          options: response.data.map((city) => {
-            return {
-              value: `${city.latitude} ${city.longitude}`,
-              label: `${city.name}, ${city.countryCode}`,
-            };
-          }),
-        };
-      })
-      .catch((err) => console.log(err));
+  const loadOptions = async (inputValue) => {
+    try {
+      let response = await fetch(
+        `${GEO_API_URL}/cities?minPopulation=100000&namePrefix=${inputValue}`,
+        geoApiOptions
+      );
+      let json = await response.json();
+
+      return {
+        options: json.data.map((city) => {
+          return {
+            value: `${city.latitude} ${city.longitude}`,
+            label: `${city.name}, ${city.countryCode}`,
+          };
+        }),
+      };
+    } catch (error) {
+      console.log("No results found");
+      console.log(error);
+      return {
+        options: [],
+      };
+    }
   };
 
   const handleOnChange = (searchData) => {
